@@ -293,6 +293,10 @@ use SNI encryption. If that were the case, the detection of SNI encryption would
 be a lesser concern. However, we have to assume that, in the near future, only
 a small fraction of TLS connections will use SNI encryption.
 </t>
+        <t>This requirement to not stick out may be difficult to meet in practice, as noted in
+<xref target="secuseq" format="default"/>.
+</t>
+
       </section>
       <section anchor="forward-secrecy" numbered="true" toc="default">
         <name>Maintain Forward Secrecy</name>
@@ -485,9 +489,10 @@ fronting server to access the hidden service, since this wrong server
 could disclose their access to adversaries. This requires a controlled
 way to indicate which fronting server is acceptable by the hidden service.
 </t>
-        <t>This problem is both similar and different from the "fronting server
+        <t>This problem is similar to the "word of mouth" variant
+of the "fronting server
 spoofing" attack described in <xref target="nocontextsharing"
-format="default"/>. Here, the spoofing
+format="default"/>. The spoofing
 would be performed by distributing fake advice, such as "to reach
 hidden.example.com, use fake.example.com as a fronting
 server", when "fake.example.com" is under the control of an
